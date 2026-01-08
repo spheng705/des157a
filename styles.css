@@ -1,4 +1,148 @@
+.hero {
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+    margin-left: 30px;
+    padding-left: 20px;
+}
+
+.hero img {
+    padding-bottom: 20px;
+    padding-left: 30px;
+}
+
 body {
-    background-color:antiquewhite;
-    font-family: Arial;
+    font-family: "Figtree", sans-serif;
+    color: #202020;
+    background-color: #ffffff;
+    margin: 0;
+}
+
+.tags {
+    display: flex;
+    justify-content: center;
+}
+
+.tag-row {
+    display: flex;
+    gap: 1.5em;
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-family: "Figtree", sans-serif;
+    font-size: 0.9rem;
+    padding: 0.5em 2em;
+    background: #ffffff;
+    border-radius: 999px;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+}
+
+.float {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* decor positions */
+.decor-1 {
+    top: -50px;
+    right: -50px;
+    width: 170px;
+}
+
+.decor-2 {
+    bottom: 5%;
+    right: 30px;
+    width: 140px;
+}
+
+.decor-3 {
+    left: 400px;
+    bottom: -100px;
+    width: 220px;
+}
+
+.decor-4 {
+    bottom: 20px;
+    left: -50px;
+    width: 90px;
+    transform: rotate(-10deg);
+}
+
+.layout {
+    position: relative;
+    max-width: 1200px;
+    margin: 4em auto;
+    padding: 0 2em;
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 2em;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2em;
+    margin-top: 30px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 1.5em;
+    border-radius: 1em;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+
+.card h2 {
+    font-family: "Figtree", sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.3em;
+    margin-bottom: 1.2em;
+    margin-left: 10px;
+}
+
+.card ul {
+    max-width: 250px;
+    margin: 0;
+}
+
+.card li {
+    margin-bottom: 1em;
+    margin-left: 10px;
+}
+
+.card li a {
+    font-family: "Figtree", sans-serif;
+    font-size: 0.9rem;
+    margin-bottom: 1em;
+    text-decoration: none;
+    color: #202020;
+}
+
+.card a:hover {
+    color: #b97d7d;
+}
+
+.no-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    margin-left: 650px;
+    border-radius: 1.5em 1.5em 0 0;
+}
+
+footer a {
+    color: #F2C1D1;
+    text-decoration: none;
+}
+
+footer p {
+    color: #ACCCDB;
 }
