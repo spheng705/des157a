@@ -50,24 +50,81 @@ body {
     right: -50px;
     width: 170px;
 }
+.decor-11 {
+    top: -40px;
+    right: 30px;
+    width: 50px;
+
+    animation: wiggle 4s linear infinite;
+    transform-origin: center center;
+}
+@keyframes wiggle {
+    0%   { transform: rotate(0deg); }
+    75%  { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
+
 
 .decor-2 {
-    bottom: 5%;
+    bottom: 35px;
     right: 30px;
-    width: 140px;
+    width: 90px;
+}
+
+.decor-22 {
+    bottom: 30px;
+    right: 135px;
+    width: 40px;
+
+    animation: spin 15s linear infinite;
+    transform-origin: center center;
+}
+@keyframes spin {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 .decor-3 {
-    left: 400px;
-    bottom: -100px;
-    width: 220px;
+    left: 540px;
+    bottom: -150px;
+    width: 150px;
 }
+
+.decor-33 {
+    position: absolute; /* make sure this is set via .float or here */
+    left: 480px;
+    bottom: -70px;
+    width: 50px;
+
+    animation: wiggle 3s linear infinite;
+    transform-origin: center center;
+}
+@keyframes wiggle {
+    0%   { transform: rotate(0deg); }
+    25%  { transform: rotate(8deg); }
+    50%  { transform: rotate(0deg); }
+    75%  { transform: rotate(-8deg); }
+    100% { transform: rotate(0deg); }
+}
+
 
 .decor-4 {
     bottom: 20px;
     left: -50px;
-    width: 90px;
-    transform: rotate(-10deg);
+    width: 80px;
+}
+
+.decor-44 {
+    bottom: 130px;
+    left: -50px;
+    width: 55px;
+
+    animation: spin 15s linear infinite;
+    transform-origin: center center;
+}
+@keyframes spin {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 .layout {
