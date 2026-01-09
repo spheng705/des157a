@@ -1,14 +1,37 @@
-.hero {
+.hero { 
+    position: relative; 
+    width: 100%; 
+    margin-top: 50px; 
+    margin-left: 30px; 
+    padding-left: 20px; }
+
+.hero-name {
     position: relative;
-    width: 100%;
-    margin-top: 50px;
-    margin-left: 30px;
-    padding-left: 20px;
+    display: inline-block;
 }
 
-.hero img {
+.hero-name img {
+    display: block;
     padding-bottom: 20px;
     padding-left: 30px;
+}
+
+.name-base {
+    position: relative;
+    z-index: 1;
+}
+
+.name-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 1s ease;
+}
+
+.hero-name:hover .name-hover {
+    opacity: 1;
 }
 
 body {
@@ -91,7 +114,7 @@ body {
 }
 
 .decor-33 {
-    position: absolute; /* make sure this is set via .float or here */
+    position: absolute; 
     left: 480px;
     bottom: -70px;
     width: 50px;
@@ -106,7 +129,6 @@ body {
     75%  { transform: rotate(-8deg); }
     100% { transform: rotate(0deg); }
 }
-
 
 .decor-4 {
     bottom: 20px;
