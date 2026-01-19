@@ -1,0 +1,129 @@
+.hero { 
+    position: relative; 
+    width: 100%; 
+    margin-top: 50px; 
+    margin-left: 30px; 
+    padding-left: 20px; }
+
+.hero-img {
+    position: relative;
+    display: inline-block;
+}
+
+.hero a {
+    color: #96bfd2;
+    text-decoration: none;
+}
+
+.hero a:hover {
+    color: #4886a3;
+    text-decoration: none;
+}
+
+.hero-img img {
+    display: block;
+    padding-bottom: 20px;
+    padding-left: 30px;
+}
+
+.img-base {
+    position: relative;
+    z-index: 1;
+}
+
+.tags {
+    display: flex;
+    justify-content: center;
+}
+
+.tag-row {
+    display: flex;
+    gap: 1.5em;
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-family: "Figtree", sans-serif;
+    font-size: 0.9rem;
+    padding: 0.5em 2em;
+    background: #ffffff;
+    border-radius: 999px;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+}
+
+
+body {
+    font-family: "Figtree", sans-serif;
+    color: #202020;
+    background-color: #ffffff;
+    margin: 0;
+}
+
+.layout {
+    position: relative;
+    margin: 4em auto;
+    padding: 0 2em;
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 2em;
+}
+
+.journals {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.card {
+     background: #ffffff;
+    padding: 1.5em;
+    border-radius: 1em;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+
+.card h2 {
+    font-family: "Figtree", sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.3em;
+    margin-bottom: 1.2em;
+    margin-left: 10px;
+}
+
+.card a {
+    font-family: "Figtree", sans-serif;
+    margin-bottom: 1em;
+    text-decoration: none;
+    color: #d37979;
+}
+
+p {
+    padding: 5px;
+}
+
+.card a:hover {
+    color: #e0aeae;
+}
+
+.no-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    margin-left: 650px;
+    border-radius: 1.5em 1.5em 0 0;
+}
+
+footer a {
+    color: #F2C1D1;
+    text-decoration: none;
+}
+
+footer p {
+    color: #ACCCDB;
+}
