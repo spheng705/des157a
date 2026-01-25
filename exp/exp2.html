@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Experiment 2</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Experiment 2</h1>
+  <p id="output"></p>
+
+  <script>
+    //my program asks users to type their favorite color then the background color of the page will change to that color
+   
+    const color = prompt("what's your favorite color? (one word)");
+
+    function makeMessage(favoriteColor) {
+      return "no way- your favorite color is " + favoriteColor + "!? me too~ TWINSS";
+    }
+
+    function updatePage(message, favoriteColor) {
+      document.getElementById("output").innerHTML = message;
+      document.body.style.backgroundColor = favoriteColor;
+    }
+
+    const message = makeMessage(color);
+    updatePage(message, color);
+
+  </script>
+
+</body>
+</html>
