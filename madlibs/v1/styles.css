@@ -1,0 +1,121 @@
+.hero { 
+    position: relative; 
+    width: 100%; 
+    margin-top: 180px; 
+    margin-left: 190px; 
+    padding-left: 20px; }
+
+.hero-title {
+    position: relative;
+    display: inline-block;
+}
+
+.hero-title img {
+    display: block;
+    padding-bottom: 20px;
+    padding-left: 30px;
+}
+
+.tag-container {
+    position: absolute;
+    top: -100px;
+    right: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 15px;
+}
+
+.tag-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tag {
+    font-family: "Figtree", sans-serif;
+    font-size: .8rem;
+    font-weight: 500;
+    color: #00234E;
+    padding: 8px 18px;
+    background: #ffffff;
+    border-radius: 50px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+body {
+    font-family: "Figtree", sans-serif;
+    color: #202020;
+    background-color: #0254B8;
+    margin: 0;
+}
+
+.float {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.decor-1 {
+    top: 100px;
+    left: 100px;
+    width: 120px;
+}
+.decor-2 {
+    left: 610px;
+    bottom: 350px;
+    width: 150px;
+}
+.decor-3 {
+    bottom: 35px;
+    right: 30px;
+    width: 90px;
+}
+
+.decor-4 {
+    bottom: -340px;
+    left: -230px;
+    width: 1100px;
+}
+.forms-container {
+    position: absolute;
+    top: 40px;
+    right: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 490px;
+}
+
+.madlib-box {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input-group label {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #00234E; 
+    text-transform: uppercase;
+}
+
+.input-group input {
+    background: #ededed;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    height: 20px;
+    width: 85%;
+}
