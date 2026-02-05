@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twice Madlibs</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <main class="layout">
+
+        <img class="float decor-1" src="images/TLstar.svg" alt="top left star">
+        <img class="float decor-2" src="images/BMstar.svg" alt="bottom middle star">
+        <img class="float decor-3" src="images/BRstar.svg" alt="bottom right star">
+        <img class="float decor-4" src="images/twice2.svg" alt="twice group silhouette">
+
+        <header class="hero">
+            <div class="hero-title">
+                <img src="images/title.svg" alt="TWICE Madlibs" class="title-base">
+            </div>
+
+            <div class="tag-container">
+                <div class="tag-row">
+                    <span class="tag">NAYEON</span>
+                    <span class="tag">JEONGYEON</span>
+                    <span class="tag">MOMO</span>
+                    <span class="tag">SANA</span>
+                    <span class="tag">JIHYO</span>
+                </div>
+                <div class="tag-row">
+                    <span class="tag">MINA</span>
+                    <span class="tag">DAHYUN</span>
+                    <span class="tag">CHAEYOUNG</span>
+                    <span class="tag">TZUYU</span>
+                </div>
+            </div>
+
+            <form id="madlib-form" class="forms-container">
+                
+                <section class="madlib-box">
+                    <div class="input-group">
+                        <label for="fname">FRIEND'S NAME</label>
+                        <input type="text" id="fname" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="adj1">ADJECTIVE</label>
+                        <input type="text" id="adj1" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="city">CITY</label>
+                        <select id="city" class="drop-down" required>
+                            <option value="" disabled selected>Select City</option>
+                            <option value="vancouver">Vancouver</option>
+                            <option value="seattle">Seattle</option>
+                            <option value="oakland">Oakland</option>
+                            <option value="los-angeles">Los Angeles</option>
+                            <option value="phoenix">Phoenix</option>
+                            <option value="dallas">Dallas</option>
+                            <option value="chicago">Chicago</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="adj2">ADJECTIVE</label>
+                        <input type="text" id="adj2" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="member">MEMBER</label>
+                        <select id="member" class="drop-down" required>
+                            <option value="" disabled selected>Select Member</option>
+                            <option value="Nayeon">Nayeon</option>
+                            <option value="Jeongyeon">Jeongyeon</option>
+                            <option value="Momo">Momo</option>
+                            <option value="Sana">Sana</option>
+                            <option value="Jihyo">Jihyo</option>
+                            <option value="Mina">Mina</option>
+                            <option value="Dahyun">Dahyun</option>
+                            <option value="Chaeyoung">Chaeyoung</option>
+                            <option value="Tzuyu">Tzuyu</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="verb1">VERB -ING</label>
+                        <input type="text" id="verb1" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="emotion">EMOTION</label>
+                        <input type="text" id="emotion" required>
+                    </div>
+                </section>
+
+                <section class="madlib-box">
+                    <div class="input-group">
+                        <label for="adj3">ADJECTIVE</label>
+                        <input type="text" id="adj3" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="p-noun">PLURAL NOUN</label>
+                        <input type="text" id="p-noun" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="song">SONG</label>
+                        <select id="song" class="drop-down" required>
+                            <option value="" disabled selected>Song</option>
+                            <option value="This Is For">This Is For</option>
+                            <option value="FANCY">FANCY</option>
+                            <option value="What Is Love?">What Is Love?</option>
+                            <option value="Yes or Yes">Yes or Yes</option>
+                            <option value="Dance the Night Away">Dance The Night Away</option>
+                            <option value="Feel Special">Feel Special</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="verb2">VERB -ING</label>
+                        <input type="text" id="verb2" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="verb3">VERB -ING</label>
+                        <input type="text" id="verb3" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="adj4">ADJECTIVE</label>
+                        <input type="text" id="adj4" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="uname">YOUR NAME</label>
+                        <input type="text" id="uname" required>
+                    </div>
+                    <div class="input-group">
+                        <label>&nbsp;</label> 
+                         <input type="submit" value="FINISH" id="submit-btn">
+                    </div>
+                </section>
+            </form>
+        </header>
+    </main>
+
+    <section id="overlay" class="hidden">
+        <div id="madlib-result">
+            <button id="close-btn">×</button>
+            <article id="story-text">
+                </article>
+        </div>
+    </section>
+
+</body>
+</html>
