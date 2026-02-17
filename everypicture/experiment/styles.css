@@ -1,0 +1,86 @@
+body {
+  background-color: #ffff;
+  overflow: hidden;
+  margin: 0;
+}
+
+.layout {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.hero {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.title {
+  width: 500px;
+}
+
+.bag-center {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+}
+
+.bag {
+  width: 413px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.bag:active {
+  transform: scale(0.9);
+}
+
+.item {
+  position: absolute;
+
+  top: 380px;
+  left: 660px;
+
+  width: 120px;
+
+  opacity: 0;
+  transform: scale(0);
+
+  transition: all 0.6s ease;
+  z-index: 15;
+}
+
+.item.revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.ball.revealed {
+  top: 230px;
+  left: 270px;
+  width: 180px;
+}
+
+.sauce.revealed {
+  top: 420px;
+  left: 260px;
+  width: 190px;
+}
+
+.svt.revealed {
+  top: 180px;
+  left: 1060px;
+  width: 190px;
+}
+
+.mahjong.revealed {
+  top: 520px;
+  left: 1050px;
+  width: 150px;
+}

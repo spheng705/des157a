@@ -35,10 +35,6 @@ figcaption {
     margin-top: 5px;
 }
 
-img {
-    position: center;
-}
-
 .img-base {
     position: relative;
     z-index: 1;
