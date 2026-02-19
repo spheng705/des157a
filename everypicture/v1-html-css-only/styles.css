@@ -56,30 +56,30 @@ body {
   z-index: 15;
 }
 
-.item.revealed {
+.item {
   opacity: 1;
   transform: scale(1);
 }
 
-.ball.revealed {
+.ball {
   top: 230px;
   left: 270px;
   width: 180px;
 }
 
-.sauce.revealed {
+.sauce {
   top: 420px;
   left: 260px;
   width: 190px;
 }
 
-.svt.revealed {
+.svt {
   top: 180px;
   left: 1060px;
   width: 190px;
 }
 
-.mahjong.revealed {
+.mahjong {
   top: 520px;
   left: 1050px;
   width: 150px;
