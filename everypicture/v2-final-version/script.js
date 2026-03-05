@@ -28,7 +28,6 @@
   bag.addEventListener("click", function () {
     if (isAnimating) return;
 
-
     if (currentIndex >= inventory.length) {
       endOverlay.style.display = "flex";
       return;
@@ -36,9 +35,8 @@
 
     isAnimating = true;
 
-    const data = inventory[currentIndex]; // get item
+    const data = inventory[currentIndex]; 
 
-    // create element
     const itemContainer = document.createElement("div");
     itemContainer.classList.add("item-container");
     itemContainer.innerHTML = `
@@ -51,9 +49,8 @@
     itemContainer.style.transform = "translate(-50%, -50%) scale(0)";
     itemContainer.style.opacity = "0";
 
-    layout.appendChild(itemContainer); // add to screen
+    layout.appendChild(itemContainer);
 
-    // animation
     setTimeout(() => {
       itemContainer.style.left = `${data.x}%`;
       itemContainer.style.top = `${data.y}%`;
@@ -68,11 +65,26 @@
     }, 300);
   });
 
-  // reset 
+  // reset items hop back in
   resetBtn.addEventListener("click", function () {
     endOverlay.style.display = "none";
-    document.querySelectorAll(".item-container").forEach(el => el.remove());
-    currentIndex = 0;
+    
+    const items = document.querySelectorAll(".item-container");
+    
+    items.forEach((item, index) => {
+      setTimeout(() => {
+        item.style.left = "50%";
+        item.style.top = "50%";
+        item.style.transform = "translate(-50%, -50%) scale(0)";
+        item.style.opacity = "0";
+      }, index * 40); 
+    });
+
+    // reset counter
+    setTimeout(() => {
+      items.forEach(el => el.remove());
+      currentIndex = 0;
+    }, 800 + (items.length * 40)); 
   });
 
 })();
