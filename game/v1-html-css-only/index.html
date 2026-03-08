@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ur toast!</title>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="layout">
+        <header class="game-header">
+            <div class="header-left-group">
+                <div class="header-box">Turn: Player 1</div>
+                <div class="header-box">Goal: 30</div>
+            </div>
+
+            <img class="title-img" src="images/title.svg" alt="Ur toast!">
+
+            <div class="header-right-group">
+                <button class="header-box">Rules</button>
+            </div>
+        </header>
+
+        <main class="game-container">
+            
+            <section class="player-column">
+                <div class="score-card">
+                    <p class="label">Total Score</p>
+                    <h2 class="score-val">14</h2>
+                    <hr>
+                    <p class="label">Current Heat</p>
+                    <h2 class="heat-val">+5</h2>
+                </div>
+                <div class="button-stack">
+                    <button class="action-btn roll">ROLL</button>
+                    <button class="action-btn stop">END TURN</button>
+                </div>
+            </section>
+
+            <div class="toaster-column">
+                <img class="toaster-img" src="images/toaster2.svg" alt="toaster">
+            </div>
+
+            <section class="player-column">
+                <div class="score-card">
+                    <p class="label">Total Score</p>
+                    <h2 class="score-val">22</h2>
+                    <hr>
+                    <p class="label">Current Heat</p>
+                    <h2 class="heat-val">+0</h2>
+                </div>
+                <div class="button-stack">
+                    <button class="action-btn roll">ROLL</button>
+                    <button class="action-btn stop">END TURN</button>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>

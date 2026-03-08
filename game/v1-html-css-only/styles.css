@@ -1,0 +1,162 @@
+body {
+  background-color: #ffffff;
+  margin: 0;
+  font-family: 'Figtree', sans-serif;
+  overflow: hidden;
+}
+
+/* layout */
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 30px 60px;
+  box-sizing: border-box;
+}
+
+/* header */
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-left-group {
+  display: flex;
+  gap: 15px;
+  flex: 1;
+}
+
+.header-right-group {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.header-box {
+  background: #ffffff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  color: #333333;
+}
+
+button.header-box {
+  cursor: default;
+  outline: none;
+}
+
+.title-img {
+  width: 300px;
+  flex: 0 0 auto;
+}
+
+/* main grid */
+.game-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  align-items: center;
+  justify-items: center;
+  flex-grow: 1;
+}
+
+.player-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+/* score card */
+.score-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 220px;
+  border: 1px solid #f5f5f5;
+  margin-bottom: 25px;
+  box-sizing: border-box;
+}
+
+.label {
+  margin: 0;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: #888888;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+}
+
+.score-val {
+  margin: 8px 0;
+  font-size: 2.8rem;
+  color: #333333;
+  font-weight: 800;
+}
+
+.heat-val {
+  margin: 8px 0;
+  font-size: 1.8rem;
+  color: #e67e22;
+  font-weight: 700;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #eeeeee;
+  margin: 18px 0;
+}
+
+/* button */
+.button-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.action-btn {
+  width: 200px;
+  padding: 14px;
+  border-radius: 10px;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: default;
+  outline: none;
+}
+
+.roll {
+  background-color: #e67e22;
+  color: #ffffff;
+  border: none;
+}
+
+.stop {
+  background-color: #ffffff;
+  color: #333333;
+  border: 1.5px solid #333333;
+}
+
+.toaster-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toaster-img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+}
