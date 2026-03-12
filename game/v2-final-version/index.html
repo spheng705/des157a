@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ur toast!</title>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="game-wrapper">
+        <div id="main-bread-assets">
+            <img src="images/topbread.svg" class="bread top" alt="">
+            <img src="images/leftbread.svg" class="bread left" alt="">
+            <img src="images/rightbread.svg" class="bread right" alt="">
+        </div>
+
+        <button class="rules-btn">RULES</button>
+
+        <div class="title-layer">
+            <img class="title-img" src="images/title.svg" alt="Ur toast!">
+            <button class="start-btn">START GAME</button>
+        </div>
+
+        <!-- rules overlay -->
+        <div id="rules-overlay" class="hidden">
+            <div id="rules-content">
+                <button id="close-rules">×</button>
+                <img class="rules-img" src="images/rules.svg" alt="rules">
+                <h3>🍞 HOW TO PLAY 🍞</h3>
+                <p><strong>Goal:</strong> Be the first to reach 50 points!</p>
+                <p><strong>ROLL:</strong> Roll two dice to add to your Current Heat.</p>
+                <p><strong>END TURN:</strong> Bank your Current Heat into your Total Score.</p>
+
+                <h3>🎲 THE DICE RULES 🎲</h3>
+                <p><strong>Any 1:</strong> You lose all your Current Heat and your turn ends automatically.</p>
+                <p><strong>Snake Eyes (1+1):</strong> Your TOTAL score is wiped to zero. Ouch.</p>
+                <p><strong>Anything else:</strong> Points added to your Current Heat — keep rolling or bank it!</p>
+
+                <h3>⚠️ THE FINE PRINT ⚠️</h3>
+                <p>First to 50+ points wins. Don't get greedy!</p>
+            </div>
+        </div>
+
+        <!-- character select overlay -->
+        <div id="character-overlay" class="hidden">
+            <div id="character-content">
+                <img class="choose-img" src="images/choose.svg" alt="choose ur bread">
+                <div class="character-grid">
+                    <img src="images/bread.svg" alt="bread" data-name="Sandwich">
+                    <img src="images/pretzel.svg" alt="pretzel" data-name="Pretzel">
+                    <img src="images/baguette.svg" alt="baguette" data-name="Baguette">
+                    <img src="images/croissant.svg" alt="croissant" data-name="Croissant">
+                    <img src="images/sourdough.svg" alt="sourdough" data-name="Sourdough">
+                    <img src="images/choco.svg" alt="choco" data-name="Choco">
+                </div>
+                <div class="selection-display">
+                    <span id="p1-choice">Player 1: None</span>
+                    <button id="done-btn">DONE</button>
+                    <span id="p2-choice">Player 2: None</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- game layout -->
+        <div class="layout hidden">
+            <header class="game-header">
+                <div class="header-left-group">
+                    <div id="turn-indicator" class="header-box">TURN: Player 1</div>
+                    <div class="header-box">GOAL: 50</div>
+                </div>
+                <img class="title-img" src="images/title.svg" alt="Ur toast!">
+                <div class="header-right-group">
+                    <button class="header-box" id="ingame-rules-btn">RULES</button>
+                </div>
+            </header>
+
+            <main class="game-container">
+                <!-- player 1 -->
+                <div class="player-column p1-side">
+                    <img id="p1-char-img" class="char-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="player 1 character">
+                    <div class="score-card">
+                        <p class="label">Total Score</p>
+                        <h2 id="p1-total" class="score-val">0</h2>
+                        <hr>
+                        <p class="label">Current Heat</p>
+                        <h2 id="p1-heat" class="heat-val">+0</h2>
+                    </div>
+                </div>
+
+                <!-- toaster + dice + buttons -->
+                <div class="toaster-column">
+                    <img class="toaster-img" src="images/toaster2.svg" alt="toaster">
+
+                    <!-- message -->
+                    <p id="game-message" class="game-message hidden"></p>
+
+                    <!-- dice area -->
+                    <div class="dice-area">
+                        <div id="dice-placeholder" class="dice-placeholder">Roll to start!</div>
+                        <img id="die1-img" class="die-img hidden" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="die 1">
+                        <img id="die2-img" class="die-img hidden" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="die 2">
+                    </div>
+
+                    <div class="button-stack">
+                        <button id="roll-btn" class="action-btn roll">ROLL</button>
+                        <button id="stop-btn" class="action-btn stop">END TURN</button>
+                        <button id="restart-btn" class="action-btn restart hidden">PLAY AGAIN</button>
+                    </div>
+                </div>
+
+                <!-- player 2 -->
+                <div class="player-column p2-side">
+                    <img id="p2-char-img" class="char-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="player 2 character">
+                    <div class="score-card">
+                        <p class="label">Total Score</p>
+                        <h2 id="p2-total" class="score-val">0</h2>
+                        <hr>
+                        <p class="label">Current Heat</p>
+                        <h2 id="p2-heat" class="heat-val">+0</h2>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
